@@ -1,0 +1,23 @@
+--------flow of the program
+1. the user will be authenticated used google auth
+2. then it will get all the email labels of the user and check if the passed label is present or not
+3. if the label is not present it will create the label and return the label id
+5. get the user email if using the user profile end point
+6. get all the email threads of the user
+7. iterate over each thread and check if the user has very replied back in the email
+8. if no replies are found in a particular email thread then grab the subject and message id of that email and sender email
+9.using the subject ,message id and sender email create encoded email in format
+10. use the thread id,encoded email string to send email 
+11. send email function will return the thread id on success ,add that thread to the new label 
+12. timeintervalfunc function will call itself ever 45-120 seconds as it using ssettimeout ,here recussion is happening 
+13 inside of timeintervalfunci am calling the main function .so it will get eecuted everytime timeintervalfunc in called ie 45-120 secs
+
+
+
+----------things that can be improved
+1. in my code i am checking the entire email thread..i can add a filter to only check for the last 24 hour or last 7 days.I have found the api for this and can implement if asked
+
+
+
+----tech stack used
+nodejs, google api(gmail.api)

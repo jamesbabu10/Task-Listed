@@ -59,8 +59,8 @@ const mainfunc = async (labelname, reply) => {
 };
 
 function timeintervalfunc() {
-  let min = 10,
-    max = 20;
+  let min = 45,
+    max = 120;
   let rand = Math.floor(Math.random() * (max - min + 1) + min);
   console.log("Wait for " + rand + " seconds");
   mainfunc(
@@ -71,3 +71,5 @@ function timeintervalfunc() {
 }
 
 timeintervalfunc();
+
+// flow of the prgram
